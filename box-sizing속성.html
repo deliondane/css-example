@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box-sizing속성</title>
+  <style>
+    div{
+      width: 200px;
+      margin: 20px;
+      padding: 20px;
+      border: 20px solid black;
+      color: white;
+      font-size: 20px;
+    }
+    .content-box{
+      background-color: blue;
+      box-sizing: content-box;
+      /*width안쪽으로 포함안함*/
+    }
+    .border-box{
+      background-color: red;
+      box-sizing: border-box;
+      /*width안쪽으로 padding border영역이 포함, margin은 포함안함*/
+    }
+  </style>
+</head>
+<body>
+  <div class="content-box">content-box</div>
+  <div class="border-box">border-box</div>
+</body>
+</html>
