@@ -8,8 +8,13 @@
     section{
       font-size: 5rem;
     }
-    a+div{
-      visibility: hidden;
+    section>a+div{
+      display: none;
+    }
+    /*section의 자식요소인 a에 마우스를 올리면 
+    그 다음 현재요소인 div의 display를 block으로 설정한다*/
+    a:hover+div{
+      display: block;
     }
     </style>
 </head>
