@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>overflow연습</title>
+    <style>
+      .content {
+        width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+        overflow: auto;
+      }
+
+      .scroll-box {
+        width: 300px;
+        height: 100px;
+        border: 1px solid #000;
+        /* 콘텐츠가 넘칠 경우 스크롤바 표시 */
+        overflow: auto;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #000;
+        /* 넘치는 부분을 숨김 */
+        overflow: hidden;
+      }
+      .child {
+        width: 300px;
+        height: 150px;
+        background-color: lightblue;
+        margin: 5px;
+      }
+
+      .container {
+        width: 300px;
+        height: 200px;
+        border: 1px solid #000;
+        overflow-x: auto; /* 가로 스크롤을 활성화 */
+        overflow-y: hidden; /* 세로 스크롤을 비활성화 */
+      }
+      .container .box{
+        width:400px;
+        height:300px;
+        background-color:red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quod
+      molestiae rerum nostrum numquam, et, nam provident magnam dolores eius
+      maiores suscipit, beatae rem minima adipisci nemo nesciunt quaerat enim.
+      Repellendus culpa, sit quidem similique, at numquam nulla harum cum maxime
+      a dolor cupiditate sunt tempore expedita ea, doloribus quaerat voluptatem
+      facilis esse porro fugit fugiat assumenda unde eveniet. Sed? Impedit sunt
+      cupiditate magni expedita exercitationem, recusandae ipsa alias explicabo
+      temporibus saepe optio nemo at, corrupti deserunt facere, libero tenetur
+      natus nisi. Magni porro reiciendis iste, commodi sed suscipit corrupti?
+    </div>
+    <br>
+    <div class="scroll-box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad blanditiis
+      obcaecati, fuga voluptate laborum dicta consequatur omnis est enim
+      praesentium velit magnam iste nulla. Exercitationem maiores debitis aut
+      dolores itaque! Qui, temporibus quos dolorem libero illum velit ab
+      distinctio unde nam a repellat perspiciatis soluta dolorum corrupti, atque
+      facere assumenda saepe? Veritatis ipsa consectetur eius, qui culpa sequi
+      provident unde. Repudiandae velit rem numquam laborum hic eius molestias
+      similique quidem quas placeat, nemo odit nesciunt nostrum optio maxime
+      adipisci assumenda at vero dicta incidunt aut illo, ex iusto! Maxime,
+      nesciunt?
+    </div>
+    <br>
+    <div class="box">
+      <div class="child">Child 1</div>
+      <div class="child">Child 2</div>
+    </div>
+    <br> 
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
