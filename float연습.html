@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float연습</title>
+  <style>
+    /*body요소의 여백 제거*/
+    body{
+    margin:0;
+    }
+    ul,li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+        color: inherit;
+    }
+    
+    ul{
+      text-align: center;
+      overflow: hidden;
+      display: inline-block;
+      border-radius: 10px; 
+      padding: 0 10px;
+      width: 1000px;
+    }
+    li{
+      text-align: center;
+      display: inline-block;
+      float: left;
+      padding: 60px;
+      background-color: aliceblue;
+      
+    }
+    li:hover{
+      background-color: blueviolet ;
+      color: white;
+    }
+    section{
+      text-align: center;
+      line-height: 800px;
+      width: 1000px;
+      height:800px;
+      color:#fff;
+    }
+    /*각 영역을 구분하기위해 배경색을 따로 설정 한다.*/
+    #home{ background-color:pink; }
+    #about{ background-color:khaki; }
+    #profile{ background-color:orange; } 
+    #portfolio{ background-color:skyblue; }
+    #skill{ background-color:olive; }
+    
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">home</a></li>
+      <li><a href="#">about</a></li>
+      <li><a href="#">profile</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="#">skill</a></li>
+    </ul>
+  </nav>
+
+    <section id="home">home</section>
+    <section id="about">about</section>
+    <section id="profile">profile</section>
+    <section id="portfolio">portfolio</section>
+    <section id="skill">skill</section>
+</body>
+</html>
