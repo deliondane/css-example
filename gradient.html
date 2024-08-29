@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gradient속성</title>
+    <style>
+      /*
+      Linear-gradient(각도, 색상 위치, 색상 위치, ...)
+    */
+      .gradient1 {
+        font-family: "Times New Roman";
+        line-height: 60px;
+        text-align: center;
+        background: #f60;
+        color: white;
+
+        background: linear-gradient(
+          180deg,
+          #f85032 0%,
+          #f16f5c 50%,
+          #f6290c 51%,
+          #e73827 100%
+        );
+
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+
+        background: radial-gradient(
+          circle,
+          black 0%,
+          hotpink 100%
+        );
+      }
+
+      .gradient2{
+        width: 300px;
+        height: 300px; 
+        border: 1px solid black;
+        background: repeating-linear-gradient(45deg, black, hotpink 50px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient1">
+      <h1>CSS3 Gradient</h1>
+    </div>
+
+    <div class="gradient2"></div>
+  </body>
+</html>
