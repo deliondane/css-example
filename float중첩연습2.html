@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float연습2</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    ul,li{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav{
+      width: 1200px;
+      background-color: #2f2f2f;
+      overflow: auto;
+    }
+
+    .left-area{
+      float: left;
+    }
+    ul{
+      overflow: auto;
+    }
+    li{
+      color: white;
+      font-size: 16px;
+      float: left;
+      margin: 0 15px;
+      line-height: 50px;
+    }
+
+    .right-area{
+      float: right;
+      width: 400px;
+      height: 82px;
+      overflow: auto;
+    }
+    .right-area>a{
+      float: right;
+      margin: 29px 28px;
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="left-area">
+       <ul>
+          <li><a href="#"><b>SHAM</b>MAH</a></li>
+          <li>ABOUT</li>
+          <li>NEWS</li>
+          <li>PORTFOLIO</li>
+          <li>BOARD</li>
+          <li>ALBUM</li>
+          <li>CONTACT</li>
+        </ul>
+    </div>
+    <div class="right-area">
+      <a href="#">
+        <img src="bg_image/search.png" alt="search">
+      </a>
+    </div>
+  </nav>
+</body>
+</html>

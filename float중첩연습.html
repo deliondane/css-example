@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float중첩연습</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .area{
+      width: 1200px;
+      padding: 10px;
+      background-color: orange;
+      overflow: auto;
+    }
+    .left-area{
+      float: left;
+      margin: 0 30px;
+      color: white;
+    }
+    .right-area{
+      float: right;
+      text-align: center;
+      margin: 0 60px;
+      width: 600px;
+    }
+    .small-unit{
+      float: right;
+      margin: 0 10px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="area">
+    <div>
+      <div class="left-area">
+        <a href="#">
+          <b>SHAM</b>MAH
+        </a>
+      </div>
+      <div class="right-area">
+        <div class="small-unit">CONTACT</div>
+        <div class="small-unit">ALBUM</div>
+        <div class="small-unit">BOARD</div>
+        <div class="small-unit">PORTFOLIO</div>
+        <div class="small-unit">NEWS</div>
+        <div class="small-unit">ABOUT</div>
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
