@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition연습</title>
+    <style>
+      body,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+
+      body {
+        height: 1000px;
+      }
+
+      div {
+        width: 0;
+        height: 10px;
+        background-color: red;
+        transition: width 1s cubic-bezier(0,1.57,1,.11);
+      }
+
+      body:hover > div {
+        width: 100%;
+        transition: width 4s ease-in;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+
+    <h1>요구 : 프로그래스 바가 천천히 진행되록 해주세요.</h1>
+  </body>
+</html>
