@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>overlay</title> 
+  <!--폰트어썸 CDN-->
+  <script src="https://kit.fontawesome.com/a9260f0aa2.js" crossorigin="anonymous"></script>
+  <style>
+    .container{
+      width: 80%;
+      margin: 0 auto;
+      position: relative; /* 유령의 집화 */
+    }
+    .container>img{
+      display: block;
+      width: 100%;
+    }
+    .overlay{
+      position: absolute;
+      color: white;
+      font-size: 50px;
+
+      /* pos:abs를 적용한 요소를 가운데 정렬하는 방법 */
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      /*화면에서 제거*/
+      /* display: none; */
+
+      opacity:  0%;
+    }
+    /* container에 마우스를 올리면 .overlay가 나타남 */
+    .container:hover>.overlay{
+      /* display: block; */
+      opacity: 100%;
+      transition: 1s;
+    }
+
+    i{
+      color: skyblue;
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="bg_image/joe-caione-qO-PIF84Vxg-unsplash.jpg">
+    <div class="overlay">
+      <div class="txt">Hello Dog!</div>
+    </div>
+  </div>
+  <i class="fa-brands fa-twitter"></i>
+</body>
+</html>

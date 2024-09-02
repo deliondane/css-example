@@ -22,9 +22,17 @@
       text-decoration: none;
       color: inherit;
     }
+
+
+    nav{
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+      }
+
     ul{
       width: 1000px;
-      margin: 20px auto;
+      margin: 0 auto;
       border-radius: 10px; 
       text-align: center;
       overflow: auto; /* float속성을 적용한 자식요소의 높이를 인식시키기 위해 설정 */
@@ -60,6 +68,7 @@
       height:800px;
       color:#fff;
       margin: 0 auto;
+      border-radius: 10px; 
     }
     /*각 영역을 구분하기위해 배경색을 따로 설정 한다.*/
     #home{ background-color:pink; }

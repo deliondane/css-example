@@ -1,0 +1,56 @@
+/* 노말라이즈 */
+*{margin: 0; padding: 0; }
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* container 크기 설정 */
+.container{
+  height: 100vh;
+  width: 100%;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+/* header설정 */
+.container > .menu-box{
+  height: 147.5px;
+  width: auto;
+  border: 1px solid palevioletred;
+  text-align: center;
+  margin: 5% auto;
+}
+.container > .menu-box > h1{
+  background-color: black;
+  color: palevioletred;
+  padding: 20px 200px ;
+  box-sizing: border-box;
+  margin: 10px;
+  overflow: auto;
+}
+.container > .menu-box > ul{
+  background-color: black;
+  color:palevioletred;
+  height: 39px; 
+  width: auto;
+  margin: 0 10px;
+  overflow: auto;
+}
+.container > .menu-box > ul > li{
+  float: left;
+  padding: 15px 40px; /* width:80px; height:30px; */
+  box-sizing: border-box;
+  margin: 5px 5px;
+}
+
+/* content-box 설정 */
+.box{
+  width: 1080px;
+  border: 1px solid palevioletred;
+  margin: 0 auto;
+}
+
