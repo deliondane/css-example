@@ -1,0 +1,68 @@
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+a{text-decoration: none; color: inherit;}
+
+.login{
+  position: fixed;
+  top:0; left: 0; bottom: 0; right: 0;
+  background-color: rgba(0,0,0,0.8);
+  user-select: none; /* 텍스트가 선택되지 않도록 막아줌 */
+}
+
+.login>.container{
+  width: 500px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform:translateX(-50%);
+  border-radius: 20px;
+}
+
+.container h1{
+  text-align: center; 
+  margin-top: 40px;
+}
+.container > form{
+   padding: 40px;
+}
+input[type=text],
+input[type=password]{
+  width: 100%;
+  border: 1px solid #999;
+  padding: 16px;
+  margin-bottom: 10px;
+}
+p{
+  line-height: 40px;
+}
+input[type=checkbox]{
+  margin-right: 5px;
+}
+label{
+  font-size: 13px;
+  color: #999;
+}
+input[type=submit]{
+  height: 40px;
+  width: 60px;
+  float: right;
+  background-color: #696;
+  color: #fff;
+  border: none;
+}
+
+.join{
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+  text-align: center;
+  color:#aaa;
+}
+.join > a{
+  padding: 0 20px;
+}
+.join > a:first-child{
+  border-right: 1px solid #aaa ;
+}
