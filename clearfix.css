@@ -1,0 +1,5 @@
+.clearfix::after{/* 클리어필스핵 */
+  content: "";
+  display: block;
+  clear:both;
+}

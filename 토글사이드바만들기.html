@@ -70,13 +70,44 @@
     .menu-box>ul>li:hover>a:not(:only-child)::after{
       content: " [-]";
     }
-
+    
     .sub1{
       display: none;
     }
     /*1차 메뉴에 마우스를 올리면 2차메뉴가 나타남*/
     .menu-box>ul>li:hover>.sub1{
       display: block;
+    }
+    
+    /* 3차 메뉴 */
+    .sub2{
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: black;
+    }
+    /* 2차메뉴에 마우스를 올리면 3차 메뉴가 나타남 */
+    .sub1>li:hover>.sub2{
+      display: block;
+    }
+    /* 3차 메뉴가 있는 2차메뉴에 "[+}"추가 */
+    ul.sub1>li>a:not(:only-child)::after{
+      content: " [+]";
+    }
+    /*메뉴에 마우스를 올리면 [+]를 [-]로 변경*/
+    ul.sub1>li:hover>a:not(:only-child)::after{
+      content: " [-]";
+    }
+
+    /* 2차 메뉴의 아이템요소(li)을 유령의집화 */
+    .sub1>li{
+      position: relative;
+    }
+    .sub2>li>a{
+      white-space: nowrap; /* 줄바꿈 방지 */
+      display: block;
+      padding: 10px;
     }
   </style>
 </head>
@@ -92,7 +123,13 @@
         <li>
           <a href="#">1차 메뉴 아이템</a>
           <ul class="sub1">
-            <li><a href="#">2차 메뉴 아이템</a></li>
+            <li>
+              <a href="#">2차 메뉴 아이템</a>
+              <ul class="sub2">
+                <li><a href="#">3차 메뉴 아이템</a></li>
+                <li><a href="#">3차 메뉴 아이템</a></li>
+              </ul>  
+            </li>
             <li><a href="#">2차 메뉴 아이템</a></li>
             <li><a href="#">2차 메뉴 아이템</a></li>
             <li><a href="#">2차 메뉴 아이템</a></li>
