@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>와이어프레임</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <style>
+    ul,li{list-style: none;}
+
+    #container{
+      box-sizing: border-box;
+      width: 760px;
+      margin: 0 auto;
+    }
+
+    .header{
+      width: 760px;
+      height: 120px;
+      border: 1px solid orange;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+    }
+    .header > article{
+      border: 1px solid skyblue;
+      width: 160px;
+      height: 100px;
+    }
+    .header > .box{
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: space-between;
+    }
+    .header > .box > box{
+      border: 1px solid skyblue;
+      width: 140px;
+      height: 20px;
+    }
+    .header > .box > .menu{
+      border: 1px solid skyblue;
+      width: 450px;
+      height: 40px;
+      padding: 5px;
+      display: flex;
+      justify-content: space-around;
+
+    }
+    .header > .box > .menu > box{
+      width: 105px;
+      margin: 0 5px;
+      border-radius: 3px;
+      border: 1px dotted #999;
+    }
+    
+    .main{
+      width: 760px;
+      height: 240px;
+      border: 1px solid orange;
+      margin: 10px 0;
+      padding: 5px;
+    }
+    
+    .content{
+      padding: 5px;
+      display: flex;
+      width: 760px;
+      height: 520px;
+      border: 1px solid orange;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .content > .index{
+      width: 490px;
+      height: 160px;
+      border: 1px solid skyblue;
+    }
+    .content > .s_index{
+      width: 240px;
+      height: 160px;
+      border: 1px solid skyblue;
+    }
+    
+    .footer{
+      width: 760px;
+      height: 170px;
+      padding: 5px;
+      border: 1px solid orange;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: end;
+      margin: 10px 0;
+    }
+    .footer>:nth-of-type(1){
+      width: 160px;
+      height: 80px;
+      border: 1px solid skyblue;
+    }
+    .footer>:nth-of-type(2),
+    .footer>:nth-of-type(3){
+      width: 280px;
+      height: 20px;
+      border: 1px solid skyblue;
+    }
+
+  </style>
+</head>
+<body>
+  <br>
+  <div id="container">
+
+    <div class="header">
+      <article></article>
+      <div class="box">
+        <box></box>
+        <div class="menu">
+          <box></box>
+          <box></box>
+          <box></box>
+          <box></box>
+        </div>
+      </div>
+    </div>
+    
+    <div class="main"></div>
+
+    <div class="content">
+      <div class="index"></div>
+      <div class="s_index"></div>
+      <div class="s_index"></div>
+      <div class="s_index"></div>
+      <div class="s_index"></div>
+      <div class="s_index"></div>
+      <div class="index"></div>
+    </div>
+
+    <div class="footer">
+      <article></article>
+      <article></article>
+      <article></article>
+    </div>
+  </div>
+</body>
+</html>
