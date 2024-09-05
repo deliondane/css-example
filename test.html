@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <style>
+    a{text-decoration: none; color: inherit;}
+
+    #container{
+      box-sizing: border-box;
+      width: 1200px;
+      height: 500px;
+      padding: 10px;
+      margin: 0 auto;
+      display: flex;
+  background-color: #333;
+    }
+
+    .left{
+      width: 360px;
+      height: 480px;
+      background-image: url(bg_image/layout01.png);
+      display: flex;
+      flex-direction: column;
+      padding: 35px 40px;
+    }
+    .left > h2{
+      font-size: 16px;
+      color: #fff;
+    }
+    .left > p{
+      width: 20px;
+      border-bottom: 2px solid #fff;
+      margin: 18px 0 20px;
+    }
+    .left > a{
+      font-size: 12px;
+      color: #fff;
+      margin: 3px 0;
+    }
+
+    .right{
+      width: 820px;
+      height: 480px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .right > .banner{
+      width: 260px;
+      height: 240px;
+      padding: 35px 0 0 40px;
+      background-color: #fff;
+    }
+    .right > .long{
+      width: 560px;
+      color: #fff;
+      background-image: url(bg_image/layout02.png);
+      padding: 35px 40px;
+    }
+    .right > .long > h2{
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+    .right > .banner > h2{
+      font-size: 16px;
+
+    }
+    .right > .banner > p{
+      width: 20px;
+      border-bottom: 2px solid skyblue;
+      margin: 18px 0 20px;
+    }
+    .right > .banner > a{
+      display: block;
+      font-size: 12px;
+      margin: 5px 0;
+    }
+    .right>:last-child{
+      background-image: url(bg_image/layout03.png);
+    }
+  </style>
+</head>
+<body>
+  <nav id="container">
+    <div class="left">
+      <h2>제품기획·개발·생산</h2>
+      <p></p>
+      <a href="#">UV 소독</a>
+      <a href="#">CLEAN</a>
+      <a href="#">소형가전</a>
+      <a href="#">BEAUTY</a>
+    </div>
+    <div class="right">
+      <div class="banner long">
+        <h2>
+          국내를 넘어<br>
+          세계로 도약하는 기업
+        </h2>
+        <img src="bg_image/global_nobel.png" alt="로고">
+      </div>
+      <div class="banner">
+        <h2>Research & Devlope</h2>
+        <p></p>
+        <a href="#">센서 개발</a>
+        <a href="#">UV LED 적용 기술</a>
+      </div>
+      <div class="banner">
+        <h2>ODM / OEM</h2>
+        <p></p>
+        <a href="#">제품 기획</a>
+        <a href="#">금형 설계</a>
+        <a href="#">디자인/설계</a>
+        <a href="#">시제품 제작</a>
+        <a href="#">회로 설계</a>
+        <a href="#">양산품 제작</a>
+      </div>
+      <div class="banner long"></div>
+    </div>
+  </nav>
+</body>
+</html>
