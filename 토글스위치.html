@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>토글스위치/border애니메이션</title>
+  <style>
+    .switch{
+      position: relative;
+      display: inline-block; /* 넓이 높이 설정하기 위해 적용 */
+      width: 60px; height: 34px;
+    }
+    .switch > input{display: none;}/* 체크박스는 화면에서 제거 */
+    /* 실제 보이는 스위치 */
+    .slider{
+      position: absolute;
+      top:0; left: 0; bottom: 0; right: 0; /* 부모요소와 같은 크기로 겹쳐짐 */
+      background-color: rgba(36, 36, 36, 0.904);
+      cursor: pointer;
+      transition: background .4s; 
+    }
+    /* 포인터 */
+    .slider::before{
+      content: "";
+      position: absolute;
+      width: 26px; height: 26px;
+      background-color: #fff;
+      left: 4px; bottom: 4px;
+      transition: transform .4s;
+    }
+    /* 체크박스가 체크됬을 때 (스위치 on) */
+    input:checked + .slider{
+      background-color: palevioletred;
+    }
+    /* 체크박스가 체크됬을 때 포인터를 오른쪽으로 이동 */
+    input:checked + .slider::before{
+      transform: translateX(26px);
+    }
+
+    /* 둥근 모양으로 변경 */
+    .round {
+      border-radius: 34px;
+    }
+    .round::before{
+      border-radius: 50%;
+    }
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+    body{
+      text-align: center;
+      background-color: #ccc;
+    }
+    button{
+      background: transparent;
+      border: 0;
+      box-sizing: border-box;
+      padding: 1em 4em;
+      color: rgba(36, 36, 36, 0.904);
+      font-size: 1em;
+      font-weight: bold;
+      /* 자식요소의 border와 겹치기 위해 box-shadow를 border처럼 넣어줌 */
+      box-shadow: inset 0 0 0 2px rgba(36, 36, 36, 0.904);
+      transition: color .25s;
+      position: relative;
+    }
+    button::before,
+    button::after{
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      width: 0; height: 0;
+      border: 2px solid transparent; /* 처음에는 border를 투명색으로 설정 */
+    }
+    /* 기준을 다르게 설정 */
+    button::before{
+      top: 0; left: 0;
+    }
+    button::after{
+      bottom: 0; right: 0;
+    }
+    /*마우스 호버시 색 변경*/
+    button:hover{color: palevioletred;}
+
+    /* 마우스 호버시 가상요소의 width와 heigth를 100%로 설정 */
+    button:hover::before,
+    button:hover::after{
+      width: 100%; height: 100%;
+    }
+
+    /* border가 그려지는 애니메이션 */
+    button:hover::before{
+      border-top-color: palevioletred;
+      border-right-color:palevioletred;
+      transition: width 0.25s ease-out, height 0.25s ease-out 0.5s;
+    }
+    button:hover::after{
+      border-bottom-color: palevioletred;
+      border-left-color:palevioletred;
+      transition: border-color 0s 1s, width 0.5s ease-out 1s, height 0.5s ease-out 1.5s;
+    }
+
+
+  </style>
+</head>
+<body>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider"></span>
+  </label>
+  <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider"></span>
+  </label>
+  <br><br>
+  <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+  <label class="switch">
+    <input type="checkbox" checked>
+    <span class="slider round"></span>
+  </label>
+
+  <br><br><br>
+  <br><br><br>
+
+  <button>BLANK</button>
+</body>
+</html>

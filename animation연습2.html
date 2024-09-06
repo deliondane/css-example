@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation2</title>
+    <style>
+      *{margin: 0; padding: 0;}
+
+      #container{
+        width: 800px;
+        height: 300px;
+        background: #41c4b2;
+        margin: 0 auto;
+        position: relative;
+        overflow: auto;
+        text-align: center;
+      }
+      #container > .bg{
+        position: absolute;
+        left: 40px;
+        top: 40px;
+      }
+
+      .img > .spaceman {
+        position: absolute;
+        top: 46px;
+        left: 0;
+        animation: up 2s ease-in-out alternate infinite;
+      }
+      @keyframes up {
+        0%{transform: translate(0, 0);}
+        50%{
+          transform: translate(0,20px);
+        }
+        100%{transform: translate(0, 0);}
+      }
+      .img > .mars {
+        position: absolute;
+        left: 280px;
+        top: 48px;
+        animation: rotate 4s ease-in-out infinite alternate;
+      }
+      @keyframes rotate {
+        0%{transform: rotate(0deg);}
+        50%{
+          transform: rotate(-30deg);
+        }
+        100%{transform: rotate(30deg);}
+      }
+
+      .txt{
+        width: 200px;
+        color: #fff;
+      }
+      .txt > h1{
+        width: 160px;
+        font-size: 22px;
+        font-weight: normal;
+        position: absolute;
+        right: 90px;
+        top: 40px;
+        color: #fff;
+      }
+      .txt > p{
+        font-size: 12px;
+        width: 160px;
+        top : 90px;
+        right: 90px;
+        text-align: justify;
+        position: absolute;
+        color: #fff;
+      }
+      .txt > button{
+        width: 160px;
+        height: 40px;
+        font-size: 14px;
+        background: inherit ; border: none; box-shadow:none; border-radius:0; padding:0; overflow:visible;
+        color : #fff;
+        border: 1px solid #fff;
+        top : 240px;
+        right: 90px;
+        position: absolute;
+      }
+
+    /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+
+      #t .container{
+        width: 800px; height: 300px;
+        background-color: #41c4b2;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      #t .imgGroup{
+        width: 380px; height: 100%;
+        position: relative;
+      }
+      #t .imgGroup > img{
+        position: absolute;
+      }
+      #t .cloud {
+        right: 0;
+        top:44px;
+      }
+      #t .space-man{
+        top: 46px;
+        left: 0;
+        animation: move 2s linear infinite;
+      }
+      @keyframes move {
+        0%{transform: translateY(20px);}
+        50%{transform: translateY(-20px);}
+        100%{transform: translateY(20px);}
+      }
+      #t .mars{
+        right: 0;
+        top: 48px;
+        animation: spin 1s linear infinite alternate;
+      }
+      @keyframes spin {
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(30deg);}
+      }
+
+
+      #t .text{
+        position: absolute;
+        width: 160px;
+        right: 90px;
+        top: 50%;
+        color: #fff;
+        transform: translateY(-50%);
+      }
+      #t .text > h2{
+        font-size: 22px;
+        font-weight: normal;
+      }
+      #t .text > p{
+        font-size: 12px;
+        letter-spacing: -1px;
+        text-align: justify;
+        margin: 30px 0 20px;
+      }
+      #t .text > button{
+        width: 100%;
+        padding: 8px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+      }
+      #t .text > button:hover{
+        background-color: #fff;
+        color: #41c4b2;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img class="bg" src="bg_image/cloud.png"></img>
+      <div class="img">
+        <img class="spaceman" src="bg_image/space_man.png">
+        <img class="mars" src="bg_image/mars.png">
+      </div>
+      <div class="txt">
+        <h1>Space Tourism</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro est
+          aliquam culpa illum, veniam a, accusantium nemo, consectetur amet iure
+          dolores architecto ducimus fuga corporis. Voluptas tempore dolor
+          cumque odio!
+        </p>
+        <button>READ MORE</button>
+      </div>
+    </div>
+
+    <br><br>
+
+    <nav id="t">
+      <div class="container">
+        <div class="imgGroup">
+          <img class="cloud" src="bg_image/cloud.png" alt="">
+          <img class="space-man" src="bg_image/space_man.png" alt="">
+          <img class="mars" src="bg_image/mars.png" alt="">
+        </div>
+        <div class="text">
+          <h2>Space Tourism</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro est
+            aliquam culpa illum, veniam a, accusantium nemo, consectetur amet iure
+            dolores architecto ducimus fuga corporis. Voluptas tempore dolor
+            cumque odio!
+          </p>
+          <button type="button">READ MORE</button>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
