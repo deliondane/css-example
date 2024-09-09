@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wireframe</title>
+  <style>
+    *{margin: 0; padding: 0;box-sizing: border-box;}
+    body{
+      width: 1280px; height: 1180px;
+      margin: 0 auto;
+    }
+    
+    .background{
+      width: 1280px; height: 920px;
+      background-image: url(hw_image/image1.jpg);
+      position: relative;
+    }
+
+    .background > article{
+      width: 1280px; height: 150px;
+      background-color: #bfbfbf;
+      position: absolute;
+      left: 0; bottom: 0;
+    }
+    .background > .txt{
+      width: 560px; height: 220px;
+      background-color: #ffffff85;
+      border-radius: 30px;
+      position: absolute;
+      left:calc(50% - 280px); top: 360px; 
+      text-align: center;
+      color: #333;
+      padding: 10px;
+    }
+    .txt > h1{
+      font-size: 72px;
+      line-height: 120px;
+    }
+    .txt > h3{
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    .box{
+      width: 905px; height: 170px;
+      position: absolute;
+      left: calc(50% - 440px); bottom: 75px;
+    }
+    .box > img{
+      border: 5px solid black;
+    }
+
+  </style>
+</head>
+<body>
+  <nav id="navigation">
+    <div class="background">
+      <article class="footer"></article>
+      <div class="txt">
+        <h1>LOGO HERE</h1>
+        <h3>
+          Lorem ipsum dolor sit amet, consectetur elit.<br>
+          Sunt, quaerat. Earum, assumenda magnam rem quasut.
+        </h3>
+      </div>
+      <div class="box">
+        <img class="img1" src="hw_image/image1.jpg" alt="" width="220px" height="160px">
+        <img class="img2" src="hw_image/image2.jpg" alt="" width="220px" height="160px">
+        <img class="img3" src="hw_image/image3.jpg" alt="" width="220px" height="160px">
+        <img class="img4" src="hw_image/image4.jpg" alt="" width="220px" height="160px">
+      </div>
+    </div>
+  </nav>
+</body>
+</html>
