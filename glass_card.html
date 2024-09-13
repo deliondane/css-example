@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>glassCard</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-image: url(img/back.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+        max-width: 440px;
+        color: #f1f1f1;
+        text-align: center;
+        padding: 50px 35px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px); /* 뒷 배경 이미지를 흐리게 표현 */
+      }
+      .card > img {
+        width: 140px;
+      }
+      .card h2 {
+        font-size: 40px;
+        margin-top: 20px;
+      }
+      .card p {
+        font-size: 18px;
+        margin: 10px auto;
+      }
+
+      .card .links img{
+        width: 40px; 
+        margin: 10px 5px;
+        border-radius: 50%;
+        transition: background 0.5s;
+      }
+      .card .links img:hover{
+        background:#ff01cf;
+      }
+
+      .btn{
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 30px;
+        background-color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ff01cf;
+        border-radius: 30px;
+        margin: 30px 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+        <img src="img/profile.png" alt="profile_img" />
+        <h2>John Smith</h2>
+        <p>I'm student I like to learn coding.</p>
+        <div class="links">
+          <a href="#!"><img src="img/facebook.png" alt="" /></a>
+          <a href="#!"><img src="img/twitter.png" alt="" /></a>
+          <a href="#!"><img src="img/telegram.png" alt="" /></a>
+        </div>
+        <a class="btn" href="#">message me</a>
+      </div>
+    </div>
+
+    <!--vanilla-tilt 플러그인-->
+    <script src="js/vanilla-tilt.js"></script>
+  </body>
+</html>
